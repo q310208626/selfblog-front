@@ -10,6 +10,14 @@ const messages = {
             forgetpwd:'Forget Password?',
             loginbtn:'Login',
             registbtn:'Regist',
+
+            home: {
+                username:'tourist',
+                loginTip:'Login',
+                nav:{
+                    homepage:'HomePage',
+                }
+            }
         }
     },
     zh:{
@@ -19,7 +27,14 @@ const messages = {
             passwordConfirm:'密码确认',
             forgetpwd:'忘记密码?',
             loginbtn:'登录',
-            registbtn:'注册'
+            registbtn:'注册',
+            home: {
+                username:'游客',
+                loginTip:'登录',
+                nav:{
+                    homepage:'首页',
+                }
+            }
         }
     }
 }
