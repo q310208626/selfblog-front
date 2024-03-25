@@ -1,26 +1,14 @@
 <script lang="ts" setup>
 import { userLogin } from '@/api/api'
 
-
 let username:string;
 let userpwd:string;
 
-function login() {
-  console.debug(username,userpwd);
-  userLogin(username,userpwd)
-  // axios.post('/selfblog/login', { 'username': username, 'password': userpwd })
-  //   .then((resp: any) => {
-  //     console.log(resp.resultCode)
-  //   })
-  //   .catch((err: any) => {
-  //     console.log(err)
-  //   })
-}
 </script>
 <template>
   <div class="login-area">
 
-    <form id="login-form">
+    <form id="login-form" v-on:submit.prevent>
       <h2 id="login-header">{{ $t('message.loginbtn') }}</h2>
       <div>
         <label>{{ $t("message.username") }}</label>
@@ -32,7 +20,7 @@ function login() {
       </div>
       <div><a id="forget-pwd" href="#">{{ $t("message.forgetpwd") }}</a></div>
       <div id="loginbtn">
-        <button type="submit" id="login-btn" @click="userLogin(username,userpwd)">{{ $t("message.loginbtn") }}</button>
+        <button type="submit" id="login-btn" @click="userLogin(username,userpwd)" >{{ $t("message.loginbtn") }}</button>
         <router-link to="/register">
           <button id="regist-btn">{{ $t("message.registbtn") }}</button>
         </router-link>
